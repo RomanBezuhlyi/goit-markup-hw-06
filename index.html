@@ -30,15 +30,15 @@
                             <li class="nav-item">
                                 <a href="mailto:info@devstudio.com" class="nav-link conect">
                                     <svg class="svg-icon" width="16" height="12">
-                                        <use href="./images/icons.svg#icon-mailto"></use>
+                                        <use href="./images/icons.svg#icon-email"></use>
                                     </svg>
                                     info@devstudio.com
                                 </a>
                             </li>
                             <li class="nav-item">
                                 <a href="tel:+380961111111" class="nav-link conect">
-                                    <svg class="svg-icon" width="16" height="12">
-                                        <use href="./images/icons.svg#icon-tell"></use>
+                                    <svg class="svg-icon" width="10" height="16">
+                                        <use href="./images/icons.svg#icon-smartphone"></use>
                                     </svg>
                                     +38 096 111 11 11
                                 </a>
@@ -350,8 +350,8 @@
                     <li><a href="tel:+380991111111" class="footer-link">+38 099 111 11 11</a></li>
                 </ul>
 
-            <div>
-                <h3 class="footer-text">присоединяйтесь</h3>
+            <div class="footer-social" >
+                <h3 class="social-icon-headline">присоединяйтесь</h3>
                 <ul class="master-social-list">
                     <li>
                         <a href="#" class="master-social-link footer-icons" aria-label="Instagram">
@@ -383,16 +383,73 @@
                     </li>
                 </ul>
             </div>
+
+            <div class="footer-mailing">
+                <form>
+                    <label class="footer-form">
+                        Подпишитесь на рассылку
+                        <input type="email" class="footer-input" placeholder="E-mail">
+                    </label>
+                    <button type="submit" class="btn-mailing">
+                        Подписаться
+                        <svg class="footer-svg" width="24px" height="24px">
+                            <use href="./images/icons.svg#icon-send"></use>
+                        </svg>
+                    </button>
+                </form>
+            </div>
+
             </div>
         </div>
     </footer>
 
 <!-- Модальное окно -->
     <div class="backdrop is-hidden" data-modal>
-        <div class="modal">
-            <button class="close" data-modal-close>
-                <img src="./images/close.svg" alt="">
+        <div class="modal-box">
+            <button type="button" class="modal-close" data-modal-close>
+                <svg width="18px" height="18px">
+                    <use href="./images/icons.svg#icon-close"></use>
+                </svg>
             </button>
+            <b class="modal-headline">Оставьте свои данные, мы вам перезвоним</b>
+            <form class="modal-form">
+                <label class="form-input-box">
+                    Имя
+                    <input type="text" name="user-name" class="form-input" required>
+                        <svg class="form-input-icon" width="18px" height="18px">
+                            <use href="./images/icons.svg#icon-person"></use>
+                        </svg>
+                </label>
+
+                <label class="form-input-box">
+                    Телефон
+                    <input type="tel" class="form-input" pattern="[0-9]{10}" title="0500505050" required>
+                    <svg class="form-input-icon" width="18px" height="18px">
+                        <use href="./images/icons.svg#icon-phone"></use>
+                    </svg>
+                </label>
+
+                <label class="form-input-box">
+                    Почта
+                    <input type="email" class="form-input">
+                    <svg class="form-input-icon" width="18px" height="18px">
+                        <use href="./images/icons.svg#icon-mail"></use>
+                    </svg>
+                </label>
+
+                <label class="form-input-box">
+                    Комментарий
+                    <textarea name="user-msg" class="form-message" placeholder="Введите текст"></textarea>
+                </label>
+
+                <label class="policy-box">
+                    <input type="checkbox" class="policy-checkbox">
+                    <span class="policy-icon"></span>
+                    Соглашаюсь с рассылкой и принимаю &#8201; <a href="#">Условия договора</a> 
+                </label>
+
+                <button type="submit" class="form-submit-btn">Отправить</button>
+            </form>
         </div>
     </div>
 

@@ -551,8 +551,11 @@ address {
 .footer-item {
   margin-bottom: 9px;
 }
-.footer-text {
+
+.footer-social {
   margin-top: 12px;
+}
+.social-icon-headline {
   margin-bottom: 20px;
 
   font-weight: bold;
@@ -566,6 +569,61 @@ address {
 .footer-icons {
   background: rgba(255, 255, 255, 0.1);
   fill: #fff;
+}
+
+.footer-mailing {
+  margin-left: auto;
+  margin-top: 12px;
+}
+
+.footer-form {
+  display: inline-block;
+
+  font-weight: bold;
+  font-size: 14px;
+  line-height: 16px;
+  letter-spacing: 0.03em;
+  text-transform: uppercase;
+  color: #ffffff;
+}
+
+.footer-input {
+  display: block;
+  width: 358px;
+  height: 50px;
+
+  border: 1px solid rgba(255, 255, 255, 0.3);
+  box-sizing: border-box;
+  filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.15));
+  border-radius: 4px;
+  margin-top: 20px;
+  background: #2f303a;
+  padding: 15px 16px;
+
+  outline: none;
+  color: #ffff;
+}
+
+.btn-mailing {
+  display: inline-flex;
+  align-items: center;
+  background: #2196f3;
+  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
+  border-radius: 4px;
+
+  margin-left: 12px;
+  padding: 10px 29px;
+  font-weight: bold;
+  font-size: 16px;
+  line-height: 1.8em;
+  letter-spacing: 0.06em;
+  color: #ffffff;
+  border: none;
+}
+
+.footer-svg {
+  fill: #fff;
+  margin-left: 10px;
 }
 
 /* Модальное окно */
@@ -591,11 +649,12 @@ address {
   transform: translate(-50%, -50%) scale(0.7);
 }
 
-.modal {
+.modal-box {
   position: absolute;
   top: 50%;
   left: 50%;
 
+  padding: 40px;
   width: 528px;
   height: 581px;
 
@@ -608,14 +667,14 @@ address {
   transition: transform 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
-.close {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  margin-left: auto;
-  margin-top: 8px;
-  margin-right: 8px;
+.modal-close {
+  position: absolute;
+  top: 8px;
+  right: 8px;
 
+  display: flex;
+  align-items: center;
+  text-align: center;
   width: 30px;
   height: 30px;
 
@@ -624,4 +683,136 @@ address {
   box-sizing: border-box;
   border-radius: 50%;
   cursor: pointer;
+
+  transition: opacity 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.modal-close:hover,
+:focus {
+  fill: var(--theme-color);
+}
+
+.modal-headline {
+  display: flex;
+  justify-content: center;
+  font-weight: bold;
+  text-align: center;
+  font-size: 20px;
+  line-height: 1.1em;
+  letter-spacing: 0.03em;
+
+  color: #212121;
+}
+
+.modal-form {
+  margin-top: 12px;
+}
+
+.form-input-box {
+  position: relative;
+
+  display: block;
+  margin-bottom: 15px;
+  font-size: 12px;
+  color: #757575;
+}
+
+.form-input,
+.form-message {
+  width: 100%;
+  height: 40px;
+
+  margin-top: 3px;
+  border: 1px solid rgba(33, 33, 33, 0.2);
+  border-radius: 4px;
+  padding: 0 10px 0 42px;
+  transition: 250ms cubic-bezier(0.4, 0, 0.2, 1) linear border;
+}
+
+.form-input:focus {
+  outline: none;
+  border: 1px solid var(--theme-color);
+}
+
+.form-input:focus + svg {
+  fill: var(--theme-color);
+}
+
+.form-message {
+  font-family: inherit;
+  resize: none;
+  height: 120px;
+  padding: 12px 16px;
+  transition: 250ms cubic-bezier(0.4, 0, 0.2, 1) linear border;
+}
+
+.form-message:focus {
+  outline: none;
+  border: 1px solid var(--theme-color);
+}
+
+.form-message::placeholder {
+  color: #bababa;
+}
+
+.form-input-icon {
+  position: absolute;
+  top: 50%;
+  left: 10px;
+  transition: 250ms cubic-bezier(0.4, 0, 0.2, 1) linear fill;
+}
+
+.policy-box {
+  font-size: 14px;
+  color: #757575;
+  margin-bottom: 30px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.policy-icon {
+  display: inline-block;
+  width: 16px;
+  height: 15px;
+
+  border: 2px solid #212121;
+  border-radius: 2px;
+  margin-right: 7px;
+}
+
+.policy-checkbox {
+  -webkit-appearance: none;
+  appearance: none;
+  position: absolute;
+}
+
+.policy-checkbox:checked + .policy-icon {
+  border-color: transparent;
+  background-color: var(--theme-color);
+  background-image: url(../images/checkbox.svg);
+  background-size: contain;
+  background-repeat: no-repeat;
+}
+
+.policy-box a {
+  text-decoration: underline;
+  color: var(--theme-color);
+}
+
+.form-submit-btn {
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+
+  padding: 10px 55px;
+  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
+  border-radius: 4px;
+  font-weight: bold;
+  font-size: 16px;
+  line-height: 1.8em;
+  letter-spacing: 0.06em;
+  background: #188ce8;
+  color: #ffffff;
+  border: none;
 }
